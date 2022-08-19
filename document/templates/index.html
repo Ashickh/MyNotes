@@ -1,27 +1,39 @@
 <!DOCTYPE html>
-
 <html>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Notes</title>
+
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
     </head>
 
     <body>
-        <nav class="navbar is-dark">
+ <nav class="navbar is-info">
             <div class="navbar-brand">
-                <a href="{% url 'editor' %}" class="navbar-item">Notes</a>
+                <a href="{% url 'editor' %}" class="navbar-item"><h2><span class="bg-success">Notes</span></h2></a>
             </div>
+
 
             <div class="navbar-menu">
                 <div class="navbar-end">
-                    <a href="{% url 'editor' %}?docid=0" class="navbar-item">New document</a>
-                </div>
-            </div>
-        </nav>
+                    <a href="{% url 'editor' %}?docid=0" class="navbar-item">New Note</a>
+                     </div>
 
-        <section class="section">
+                </div>
+
+                    </nav>
+    <div class="row">
+        <div class="col-2">
+
+
+
+        </div>
+        <div class="col-8">
+
+
+
+                    <section class="section">
             <div class="columns">
                 <div class="column is-2">
                     <aside class="menu">
@@ -48,10 +60,7 @@
                                 Title
 
                                 {% if document %}
-                                    <span class="has-text-grey-light">
-                                        Created at: {{ document.created_at|date:"m/d Y" }} / 
-                                        Modified at: {{ document.modified_at|date:"m/d Y" }}
-                                    </span>
+
                                 {% endif %}
                             </label>
 
@@ -82,5 +91,7 @@
                 </div>
             </div>
         </section>
+
+
     </body>
 </html>

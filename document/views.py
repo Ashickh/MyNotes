@@ -34,7 +34,7 @@ def editor(request):
         'document': document
     }
 
-    return render(request, 'editor.html', context)
+    return render(request, 'index.html', context)
 
 def delete_document(request, docid):
     document = Document.objects.get(pk=docid)
